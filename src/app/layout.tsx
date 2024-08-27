@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Image from "next/image";
-import Link from "next/link";
 import Sidebar from "@/components/Templates/Sidebar";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -19,9 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} flex justify-center items-center w-full`}>
+      <body className={`${inter.className} flex justify-center items-start w-full`}>
         <Sidebar />
-        <div className="w-4/5 bg-slate-700">
+        <div className="w-4/5">
           {children}
         </div>
       </body>

@@ -4,7 +4,7 @@ import TitleNameAtom from '../../Atoms/SectionSidebarProfile/TitleNameAtom'
 
 const ProfileMainMolecules = ( { textName = "", linkImage = "" } ) => {
   return (
-    <div className="w-full p-4 flex flex-col justify-center items-start border-b-4 border-blue-300">
+    <div className="w-full p-4 flex flex-col justify-center items-start border-b-2 border-blue-300">
       <ImageAtom link={linkImage} />
       <TitleNameAtom text={textName} />
     </div>
