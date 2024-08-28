@@ -1,6 +1,6 @@
 import React from 'react'
-import SidebarOrganism from '../Organisms/Sidebar/SidebarListOrganism'
-import SidebarProfileOrganism from '../Organisms/Sidebar/SidebarProfileOrganism'
+import SidebarOrganism from '../Organisms/main/Sidebar/SidebarListOrganism'
+import SidebarProfileOrganism from '../Organisms/main/Sidebar/SidebarProfileOrganism'
 
 const Sidebar = () => {
   return (

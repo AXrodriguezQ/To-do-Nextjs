@@ -1,4 +1,4 @@
-import MainSectionOrganism from "@/components/Organisms/MainSection/MainSectionOrganism"
+import MainSectionOrganism from "@/components/Organisms/main/MainSection/MainSectionOrganism"
 
 const page = () => {
   return (

@@ -1,4 +1,4 @@
-import ProfileMainMolecules from '@/components/Molecules/SectionSidebarProfile/ProfileMainMolecules'
+import ProfileMainMolecules from '@/components/Molecules/main/SectionSidebarProfile/ProfileMainMolecules'
 import React from 'react'
 
 interface userProfileInterface {

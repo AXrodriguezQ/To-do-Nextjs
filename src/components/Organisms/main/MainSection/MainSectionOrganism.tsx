@@ -1,5 +1,5 @@
-import TitleAtom from '@/components/Atoms/MainSection/TitleAtom'
-import SectionInfoMolecule from '@/components/Molecules/MainSection/SectionInfoMolecule'
+import TitleAtom from '@/components/Atoms/main/MainSection/TitleAtom'
+import SectionInfoMolecule from '@/components/Molecules/main/MainSection/SectionInfoMolecule'
 import React from 'react'
 
 const MainSectionOrganism = () => {

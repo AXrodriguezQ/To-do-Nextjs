@@ -1,5 +1,5 @@
-import SvgListAtom from '@/components/Atoms/SectionSidebarList/SvgListAtom'
-import TextListAtom from '@/components/Atoms/SectionSidebarList/TextListAtom'
+import SvgListAtom from '@/components/Atoms/main/SectionSidebarList/SvgListAtom'
+import TextListAtom from '@/components/Atoms/main/SectionSidebarList/TextListAtom'
 import Link from 'next/link'
 import React from 'react'
 

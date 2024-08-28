@@ -1,5 +1,5 @@
-import CaptionAtom from '@/components/Atoms/MainSection/CaptionAtom'
-import TextInfoAtom from '@/components/Atoms/MainSection/TextInfoAtom'
+import CaptionAtom from '@/components/Atoms/main/MainSection/CaptionAtom'
+import TextInfoAtom from '@/components/Atoms/main/MainSection/TextInfoAtom'
 import React from 'react'
 
 const SectionInfoMolecule = () => {

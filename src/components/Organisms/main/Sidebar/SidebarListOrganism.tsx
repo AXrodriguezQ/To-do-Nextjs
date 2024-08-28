@@ -1,4 +1,4 @@
-import ListItemsMolecule from '@/components/Molecules/SectionSidebarList/ListItemsMolecule';
+import ListItemsMolecule from '@/components/Molecules/main/SectionSidebarList/ListItemsMolecule';
 import React from 'react'
 
 interface ListItemsInterface {

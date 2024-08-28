@@ -1,6 +1,6 @@
 import React from 'react'
-import ImageAtom from '../../Atoms/SectionSidebarProfile/ImageAtom'
-import TitleNameAtom from '../../Atoms/SectionSidebarProfile/TitleNameAtom'
+import ImageAtom from '../../../Atoms/main/SectionSidebarProfile/ImageAtom'
+import TitleNameAtom from '../../../Atoms/main/SectionSidebarProfile/TitleNameAtom'
 
 const ProfileMainMolecules = ( { textName = "", linkImage = "" } ) => {
   return (
