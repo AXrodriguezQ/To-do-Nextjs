@@ -20,8 +20,7 @@ const page = () => {
 
     useEffect(() => {
         const getData = async () => {
-            const response = await axios.get('http://localhost:3000/api/tasks');
-            console.log(response.data);
+            const response = await axios.get('http://localhost:3000/api/tasks/pending');
             setData(response.data);
         };
         getData();
