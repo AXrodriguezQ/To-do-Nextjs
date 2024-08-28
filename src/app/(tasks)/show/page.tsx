@@ -1,5 +1,6 @@
 "use client"
 
+import { dataTask } from '@/interfaces/dataTask.interface';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 
@@ -9,12 +10,6 @@ const page = () => {
         if (text.length > maxLength) return text.slice(0, maxLength) + "...";
         return text;
     };
-
-    interface dataTask {
-        id: number;
-        title: string;
-        description: string;
-    }
 
     const [data, setData] = useState<dataTask[]>([]);
 
