@@ -1,7 +1,8 @@
+import MainSectionOrganism from "@/components/Organisms/main/MainSection/MainSectionOrganism"
 
 const page = () => {
   return (
-    <div>Hello world!</div>
+    <MainSectionOrganism />
   )
 }
 
