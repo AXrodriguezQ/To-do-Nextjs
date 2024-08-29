@@ -1,11 +1,54 @@
-import React from 'react'
+"use client"
+
+import axios from 'axios';
+import React, { useState } from 'react'
 
 const page = () => {
+
+    const [title, setTitle] = useState<string>('');
+    const [description, setDescription] = useState<string>('');
+
+    const createTask = async ( event: React.FormEvent ) => {
+        event.preventDefault();
+        try {
+            const newTask = { title, description };
+
+            const response = await axios.post('http://localhost:3000/api/tasks', newTask);
+
+            if (response.data) window.location.href = 'http://localhost:3000/show';
+                
+        } catch (error) {
+            console.error('Error creating task:', error);
+        }
+    }
+
   return (
-    <article className="p-8 flex justify-start items-start flex-col select-none">
+    <article className="p-8 flex justify-start items-center flex-col select-none">
         <section className="flex flex-col gap-4 border-b-2 border-blue-300">
             <h4 className="font-bold text-5xl">Aqui puedes crear tus tareas!</h4>
             <p className="font-semibold text-xl mb-2">Recuerda que las tareas que crees se guardan solo en el caso de que las completes o las edites pero si las eliminas no las podras recuperar mas.</p>
+        </section>
+        <section className="w-2/4 flex justify-center items-center mt-8 bg-slate-100 rounded-2xl">
+            <form onSubmit={createTask} className="w-11/12 flex flex-col gap-4 p-4 my-2">
+            <input
+                name="title"
+                type="text"
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+                className="border-2 border-gray-300 p-2 py-3 w-full rounded-md focus:outline-none focus:border-blue-300"
+                placeholder="Nombre de la tarea"
+            />
+            <textarea
+                name="description"
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
+                className="border-2 border-gray-300 p-2 py-3 w-full rounded-md focus:outline-none focus:border-blue-300"
+                placeholder="Descripción de la tarea"
+            />
+            <button type="submit" className="mt-4 bg-blue-300 hover:bg-blue-500 duration-300 text-white text-xl font-semibold p-2 py-3 rounded-md w-full">
+                Crear tarea
+            </button>
+            </form>
         </section>
     </article>
   )
