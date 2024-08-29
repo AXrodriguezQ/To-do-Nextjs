@@ -27,7 +27,7 @@ const page = () => {
             const userResponse = confirm("¿Estás seguro de que deseas continuar?");
 
             if (userResponse) {
-                await axios.delete(`http://localhost:3000/api/tasks/${id}`)
+                await axios.delete(`http://localhost:3000/api/tasks/${id}`);
                 setData(data.filter(task => task.id!== id));
             };
 
@@ -35,6 +35,27 @@ const page = () => {
 
         } catch (error) {
             console.error('Error deleting task:', error);
+        }
+    }
+
+    const completeTask = async ( id: number ) => {
+        try {
+
+            const userResponse = confirm("¿Estás seguro de que ya realizaste tu tarea? Recuerda que no la puedes volver a dejar en pendiente!");
+
+            const updatedData = {
+                completed: true,
+            };
+
+            if (userResponse) {
+                await axios.put(`http://localhost:3000/api/tasks/${id}`, updatedData);
+                window.location.href = 'http://localhost:3000/show';
+            };
+
+            return
+
+        } catch (error) {
+            console.error('Error completing task:', error);
         }
     }
 
@@ -50,7 +71,7 @@ const page = () => {
                             <h4 className="text-xl font-semibold">{task.title}</h4>
                             <p className="text-base">{truncateText(task.description, 93)}</p>
                             <div className="w-4/5 mt-6 flex justify-start items-center gap-4">
-                                <button className="flex justify-center items-center rounded-xl bg-green-300 hover:bg-green-500 duration-100 p-2">
+                                <button onClick={() => completeTask(task.id)}  className="flex justify-center items-center rounded-xl bg-green-300 hover:bg-green-500 duration-100 p-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="size-6">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                                     </svg>
